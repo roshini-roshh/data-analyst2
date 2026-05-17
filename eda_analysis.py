@@ -11,7 +11,7 @@ import os
 plt.style.use('seaborn-v0_8-whitegrid')
 sns.set_palette("husl")
 
-df = pd.read_csv("skycity_auckland_restaurants.csv")
+df = pd.read_csv("sky/skycity_auckland_restaurants.csv")
 
 # Create output directory for charts
 os.makedirs("charts", exist_ok=True)
