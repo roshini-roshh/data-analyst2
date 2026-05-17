@@ -48,23 +48,27 @@ st.markdown("""
         opacity: 0.9;
     }
     .risk-high {
+        color:black
         background-color: #ffebee;
         border-left: 4px solid #c62828;
         padding: 0.8rem;
         border-radius: 4px;
     }
     .risk-moderate {
+        color:black
         background-color: #fff8e1;
         border-left: 4px solid #f57f17;
         padding: 0.8rem;
         border-radius: 4px;
     }
     .risk-low {
+        color:black
         background-color: #e8f5e9;
         border-left: 4px solid #2e7d32;
         padding: 0.8rem;
         border-radius: 4px;
     }
+    
     .channel-instore { color: #2196F3; font-weight: bold; }
     .channel-ue { color: #FF9800; font-weight: bold; }
     .channel-dd { color: #E91E63; font-weight: bold; }
