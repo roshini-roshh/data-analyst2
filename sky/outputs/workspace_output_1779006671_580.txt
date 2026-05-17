@@ -1,0 +1,246 @@
+================================================================================
+DATA VALIDATION & CONSISTENCY CHECKS
+================================================================================
+
+1. Channel orders sum to MonthlyOrders: True
+
+2. Channel shares sum to ~100%: True
+   Share sum range: 99.99% - 100.01%
+
+3. Outlier Detection (IQR Method):
+   MonthlyOrders: 0 outliers (0.0%)
+   AOV: 22 outliers (14.7%)
+   InStoreRevenue: 0 outliers (0.0%)
+   UberEatsRevenue: 1 outliers (0.7%)
+   DoorDashRevenue: 1 outliers (0.7%)
+   SelfDeliveryRevenue: 0 outliers (0.0%)
+
+================================================================================
+CHANNEL VOLUME AGGREGATION
+================================================================================
+
+1. Total Orders by Channel:
+   In-Store: 56,662 (31.4%)
+   Uber Eats: 45,211 (25.0%)
+   DoorDash: 40,533 (22.4%)
+   Self-Delivery: 38,296 (21.2%)
+   TOTAL: 180,702
+
+2. Orders by Subregion:
+                  MonthlyOrders  InStoreOrdersCount  UberEatsOrdersCount  DoorDashOrdersCount  SelfDeliveryOrdersCount
+Subregion                                                                                                             
+West Auckland             41712               13859                 9917                 9585                     8351
+East Auckland             40577               13125                10328                 8994                     8130
+Central Auckland          37307               10446                 9972                 9433                     7456
+South Auckland            34881               11157                 8248                 6737                     8739
+North Shore               26225                8075                 6746                 5784                     5620
+
+3. Orders by Cuisine Type:
+                  MonthlyOrders  InStoreOrdersCount  UberEatsOrdersCount  DoorDashOrdersCount  SelfDeliveryOrdersCount
+CuisineType                                                                                                           
+Pizza                     28613                7141                 7839                 7959                     5674
+Mediterranean             25200                8096                 6524                 5193                     5387
+Steak & Grill             22359                7864                 5176                 4723                     4596
+Indian                    17915                5098                 5004                 4425                     3388
+Cafe & Brunch             17847                6935                 3866                 3512                     3534
+Sushi & Japanese          17061                5035                 4599                 3794                     3633
+Seafood                   15968                5831                 3338                 2901                     3898
+Burgers                   13544                3817                 3338                 3169                     3220
+Mexican                   13099                3914                 3354                 2900                     2931
+Asian Fusion               9096                2931                 2173                 1957                     2035
+
+4. Orders by Segment:
+               MonthlyOrders  InStoreOrdersCount  UberEatsOrdersCount  DoorDashOrdersCount  SelfDeliveryOrdersCount
+Segment                                                                                                            
+QSR                    72851               22946                18197                16333                    15375
+Fast Casual            36928               11680                 9307                 8144                     7797
+Casual Dining          28310                8419                 7274                 6706                     5911
+Cafe                   24722                7707                 6077                 5571                     5367
+Fine Dining            17891                5910                 4356                 3779                     3846
+
+================================================================================
+CHANNEL MARKET SHARE ANALYSIS
+================================================================================
+
+1. Overall Channel Market Share (by orders):
+   In-Store: 31.36%
+   Uber Eats: 25.02%
+   DoorDash: 22.43%
+   Self-Delivery: 21.19%
+
+2. Overall Channel Market Share (by revenue):
+   In-Store: $1,869,967.98 (29.23%)
+   Uber Eats: $1,697,357.44 (26.53%)
+   DoorDash: $1,487,054.23 (23.24%)
+   Self-Delivery: $1,343,979.76 (21.01%)
+
+3. In-Store vs Delivery:
+   In-Store: 56,662 (31.4%)
+   Delivery (all channels): 124,040 (68.6%)
+
+4. Channel Ranking by Order Contribution:
+   #1: In-Store - 56,662 orders (31.4%)
+   #2: Uber Eats - 45,211 orders (25.0%)
+   #3: DoorDash - 40,533 orders (22.4%)
+   #4: Self-Delivery - 38,296 orders (21.2%)
+
+================================================================================
+GEOGRAPHIC CHANNEL PREFERENCE ANALYSIS
+================================================================================
+
+Central Auckland:
+   In-Store:       10,446 (28.0%)
+   Uber Eats:       9,972 (26.7%)
+   DoorDash:        9,433 (25.3%)
+   Self-Delivery:   7,456 (20.0%)
+
+East Auckland:
+   In-Store:       13,125 (32.3%)
+   Uber Eats:      10,328 (25.5%)
+   DoorDash:        8,994 (22.2%)
+   Self-Delivery:   8,130 (20.0%)
+
+North Shore:
+   In-Store:        8,075 (30.8%)
+   Uber Eats:       6,746 (25.7%)
+   DoorDash:        5,784 (22.1%)
+   Self-Delivery:   5,620 (21.4%)
+
+South Auckland:
+   In-Store:       11,157 (32.0%)
+   Uber Eats:       8,248 (23.6%)
+   DoorDash:        6,737 (19.3%)
+   Self-Delivery:   8,739 (25.1%)
+
+West Auckland:
+   In-Store:       13,859 (33.2%)
+   Uber Eats:       9,917 (23.8%)
+   DoorDash:        9,585 (23.0%)
+   Self-Delivery:   8,351 (20.0%)
+
+Urban vs Suburban Ordering Behavior:
+   Central Auckland (Urban): In-Store 28.0%, Delivery 72.0%
+   Rest of Auckland (Suburban): In-Store 32.2%, Delivery 67.8%
+
+================================================================================
+CUISINE & SEGMENT CHANNEL PATTERNS
+================================================================================
+
+1. Channel Mix by Cuisine Type:
+                  InStorePct  UEPct  DDPct  SDPct  AggregatorPct
+CuisineType                                                     
+Pizza                   25.0   27.4   27.8   19.8           55.2
+Indian                  28.5   27.9   24.7   18.9           52.6
+Sushi & Japanese        29.5   27.0   22.2   21.3           49.2
+Burgers                 28.2   24.6   23.4   23.8           48.0
+Mexican                 29.9   25.6   22.1   22.4           47.7
+Mediterranean           32.1   25.9   20.6   21.4           46.5
+Asian Fusion            32.2   23.9   21.5   22.4           45.4
+Steak & Grill           35.2   23.1   21.1   20.6           44.2
+Cafe & Brunch           38.9   21.7   19.7   19.8           41.4
+Seafood                 36.5   20.9   18.2   24.4           39.1
+
+2. Channel Reliance by Segment:
+               InStorePct  UEPct  DDPct  SDPct  AggregatorPct
+Segment                                                      
+Casual Dining        29.7   25.7   23.7   20.9           49.4
+QSR                  31.5   25.0   22.4   21.1           47.4
+Fast Casual          31.6   25.2   22.1   21.1           47.3
+Cafe                 31.2   24.6   22.5   21.7           47.1
+Fine Dining          33.0   24.3   21.1   21.5           45.4
+
+3. Top Aggregator-Heavy Cuisines:
+   Pizza: 55.2% aggregator reliance
+   Indian: 52.6% aggregator reliance
+   Sushi & Japanese: 49.2% aggregator reliance
+   Burgers: 48.0% aggregator reliance
+   Mexican: 47.7% aggregator reliance
+
+================================================================================
+CHANNEL DEPENDENCY RISK IDENTIFICATION
+================================================================================
+
+1. Aggregator Dependency Risk (70%+ on single aggregator):
+   High Risk (≥70%): 0 restaurants (0.0%)
+   Moderate Risk (50-69%): 0 restaurants (0.0%)
+   Low Risk (<50%): 150 restaurants (100.0%)
+
+2. Channel Diversification Score (0=concentrated, 1=balanced):
+   Mean: 0.980
+   Median: 0.985
+   Std Dev: 0.016
+
+3. Diversification Distribution:
+   DiversificationCategory
+Well Diversified          150
+Highly Concentrated         0
+Moderately Diversified      0
+
+4. Top 5 Most Channel-Concentrated Restaurants:
+      RestaurantName   CuisineType     Subregion  MaxChannelShare  ChannelDiversificationScore
+Britomart Bar & Dine Cafe & Brunch West Auckland            43.36                     0.929391
+       Mt Eden Munch Cafe & Brunch   North Shore            43.96                     0.929524
+ Pukekohe East Diner Cafe & Brunch East Auckland            43.52                     0.934730
+   Cook Street Bites       Seafood West Auckland            42.70                     0.941560
+     Pakuranga Grill Steak & Grill West Auckland            42.41                     0.944911
+
+5. Top 5 Most Diversified Restaurants:
+       RestaurantName   CuisineType        Subregion  MaxChannelShare  ChannelDiversificationScore
+      Wellsford Diner Mediterranean Central Auckland            26.43                     0.999392
+      Pukekohe Bistro       Burgers      North Shore            26.21                     0.999080
+   Silverdale Kitchen        Indian Central Auckland            26.99                     0.999028
+      Glenfield Grill       Mexican Central Auckland            26.59                     0.998852
+Point Chevalier Diner  Asian Fusion Central Auckland            26.51                     0.998844
+
+================================================================================
+KEY PERFORMANCE INDICATORS (KPIs)
+================================================================================
+
+1. Channel Order Share (%):
+   In-Store: 31.4%
+   Uber Eats: 25.0%
+   DoorDash: 22.4%
+   Self-Delivery: 21.2%
+
+2. Aggregator Dependence Index (avg):
+   Mean: 47.0%
+   By Subregion: {'Central Auckland': 51.9, 'East Auckland': 47.9, 'North Shore': 46.9, 'South Auckland': 42.6, 'West Auckland': 45.8}
+
+3. In-Store Reliance Ratio (avg):
+   Mean: 31.6%
+   By Segment: {'Cafe': 31.2, 'Casual Dining': 29.6, 'Fast Casual': 32.0, 'Fine Dining': 33.3, 'QSR': 31.4}
+
+4. Channel Diversification Score (avg):
+   Mean: 0.980
+   By Cuisine: {'Asian Fusion': 0.983, 'Burgers': 0.99, 'Cafe & Brunch': 0.957, 'Indian': 0.987, 'Mediterranean': 0.982, 'Mexican': 0.991, 'Pizza': 0.988, 'Seafood': 0.967, 'Steak & Grill': 0.973, 'Sushi & Japanese': 0.988}
+
+5. Subregion Channel Dominance:
+   Central Auckland: Dominant channel = In-Store (27.3%)
+   East Auckland: Dominant channel = In-Store (32.2%)
+   West Auckland: Dominant channel = In-Store (34.2%)
+   North Shore: Dominant channel = In-Store (31.8%)
+   South Auckland: Dominant channel = In-Store (32.2%)
+
+================================================================================
+PROFITABILITY ANALYSIS BY CHANNEL
+================================================================================
+
+1. Net Profit by Channel:
+   In-Store: $582,113.76 (49.6% of total)
+   Uber Eats: $154,228.98 (13.1% of total)
+   DoorDash: $130,383.60 (11.1% of total)
+   Self-Delivery: $307,472.47 (26.2% of total)
+
+2. Net Profit Margin by Channel:
+   In-Store: 31.1%
+   Uber Eats: 9.1%
+   DoorDash: 8.8%
+   Self-Delivery: 22.9%
+
+================================================================================
+GENERATING CHARTS
+================================================================================
+
+All 12 charts saved to charts/ directory.
+Analysis complete!
+Key metrics saved to metrics.json

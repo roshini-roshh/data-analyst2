@@ -1,0 +1,50 @@
+=== Dataset ===
+151 skycity_auckland_restaurants.csv
+
+=== Research Paper ===
+4517 research_paper.md
+
+=== Executive Summary ===
+787 executive_summary.md
+
+=== Dashboard ===
+782 dashboard.py
+
+=== Charts ===
+total 968
+drwxr-xr-x 2 root root   4096 May 17 08:31 .
+drwxr-xr-x 7 user user   4096 May 17 08:40 ..
+-rw-r--r-- 1 root root  65475 May 17 08:31 01_channel_market_share_orders.png
+-rw-r--r-- 1 root root  79069 May 17 08:31 02_channel_market_share_revenue.png
+-rw-r--r-- 1 root root  77598 May 17 08:31 03_subregion_channel_distribution.png
+-rw-r--r-- 1 root root 119596 May 17 08:31 04_cuisine_channel_heatmap.png
+-rw-r--r-- 1 root root  57259 May 17 08:31 05_segment_channel_distribution.png
+-rw-r--r-- 1 root root  54022 May 17 08:31 06_dependency_risk_distribution.png
+-rw-r--r-- 1 root root  59744 May 17 08:31 07_net_profit_by_channel.png
+-rw-r--r-- 1 root root  63272 May 17 08:31 08_diversification_score_distribution.png
+-rw-r--r-- 1 root root  99163 May 17 08:31 09_subregion_volume_heatmap.png
+-rw-r--r-- 1 root root  98031 May 17 08:31 10_cuisine_aggregator_dependence.png
+-rw-r--r-- 1 root root  48214 May 17 08:31 11_profit_margin_by_channel.png
+-rw-r--r-- 1 root root 139518 May 17 08:31 12_aov_vs_diversification.png
+
+=== Metrics ===
+{
+  "total_restaurants": 150,
+  "total_orders": 180702,
+  "total_revenue": 6398359.41,
+  "total_profit": 1174198.81,
+  "channel_orders": {
+    "In-Store": 56662,
+    "Uber Eats": 45211,
+    "DoorDash": 40533,
+    "Self-Delivery": 38296
+  },
+  "channel_revenue": {
+    "In-Store": 1869967.98,
+    "Uber Eats": 1697357.44,
+    "DoorDash": 1487054.23,
+    "Self-Delivery": 1343979.76
+  },
+  "channel_profit": {
+    "In-Store": 582113.76,
+    "Uber Eats": 154228.98,

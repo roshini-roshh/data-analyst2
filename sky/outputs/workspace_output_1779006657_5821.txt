@@ -1,0 +1,227 @@
+================================================================================
+DATA VALIDATION & CONSISTENCY CHECKS
+================================================================================
+
+1. Channel orders sum to MonthlyOrders: True
+
+2. Channel shares sum to ~100%: True
+   Share sum range: 99.99% - 100.01%
+
+3. Outlier Detection (IQR Method):
+   MonthlyOrders: 0 outliers (0.0%)
+   AOV: 22 outliers (14.7%)
+   InStoreRevenue: 0 outliers (0.0%)
+   UberEatsRevenue: 1 outliers (0.7%)
+   DoorDashRevenue: 1 outliers (0.7%)
+   SelfDeliveryRevenue: 0 outliers (0.0%)
+
+================================================================================
+CHANNEL VOLUME AGGREGATION
+================================================================================
+
+1. Total Orders by Channel:
+   In-Store: 56,662 (31.4%)
+   Uber Eats: 45,211 (25.0%)
+   DoorDash: 40,533 (22.4%)
+   Self-Delivery: 38,296 (21.2%)
+   TOTAL: 180,702
+
+2. Orders by Subregion:
+                  MonthlyOrders  InStoreOrdersCount  UberEatsOrdersCount  DoorDashOrdersCount  SelfDeliveryOrdersCount
+Subregion                                                                                                             
+West Auckland             41712               13859                 9917                 9585                     8351
+East Auckland             40577               13125                10328                 8994                     8130
+Central Auckland          37307               10446                 9972                 9433                     7456
+South Auckland            34881               11157                 8248                 6737                     8739
+North Shore               26225                8075                 6746                 5784                     5620
+
+3. Orders by Cuisine Type:
+                  MonthlyOrders  InStoreOrdersCount  UberEatsOrdersCount  DoorDashOrdersCount  SelfDeliveryOrdersCount
+CuisineType                                                                                                           
+Pizza                     28613                7141                 7839                 7959                     5674
+Mediterranean             25200                8096                 6524                 5193                     5387
+Steak & Grill             22359                7864                 5176                 4723                     4596
+Indian                    17915                5098                 5004                 4425                     3388
+Cafe & Brunch             17847                6935                 3866                 3512                     3534
+Sushi & Japanese          17061                5035                 4599                 3794                     3633
+Seafood                   15968                5831                 3338                 2901                     3898
+Burgers                   13544                3817                 3338                 3169                     3220
+Mexican                   13099                3914                 3354                 2900                     2931
+Asian Fusion               9096                2931                 2173                 1957                     2035
+
+4. Orders by Segment:
+               MonthlyOrders  InStoreOrdersCount  UberEatsOrdersCount  DoorDashOrdersCount  SelfDeliveryOrdersCount
+Segment                                                                                                            
+QSR                    72851               22946                18197                16333                    15375
+Fast Casual            36928               11680                 9307                 8144                     7797
+Casual Dining          28310                8419                 7274                 6706                     5911
+Cafe                   24722                7707                 6077                 5571                     5367
+Fine Dining            17891                5910                 4356                 3779                     3846
+
+================================================================================
+CHANNEL MARKET SHARE ANALYSIS
+================================================================================
+
+1. Overall Channel Market Share (by orders):
+   In-Store: 31.36%
+   Uber Eats: 25.02%
+   DoorDash: 22.43%
+   Self-Delivery: 21.19%
+
+2. Overall Channel Market Share (by revenue):
+   In-Store: $1,869,967.98 (29.23%)
+   Uber Eats: $1,697,357.44 (26.53%)
+   DoorDash: $1,487,054.23 (23.24%)
+   Self-Delivery: $1,343,979.76 (21.01%)
+
+3. In-Store vs Delivery:
+   In-Store: 56,662 (31.4%)
+   Delivery (all channels): 124,040 (68.6%)
+
+4. Channel Ranking by Order Contribution:
+   #1: In-Store - 56,662 orders (31.4%)
+   #2: Uber Eats - 45,211 orders (25.0%)
+   #3: DoorDash - 40,533 orders (22.4%)
+   #4: Self-Delivery - 38,296 orders (21.2%)
+
+================================================================================
+GEOGRAPHIC CHANNEL PREFERENCE ANALYSIS
+================================================================================
+
+Central Auckland:
+   In-Store:       10,446 (28.0%)
+   Uber Eats:       9,972 (26.7%)
+   DoorDash:        9,433 (25.3%)
+   Self-Delivery:   7,456 (20.0%)
+
+East Auckland:
+   In-Store:       13,125 (32.3%)
+   Uber Eats:      10,328 (25.5%)
+   DoorDash:        8,994 (22.2%)
+   Self-Delivery:   8,130 (20.0%)
+
+North Shore:
+   In-Store:        8,075 (30.8%)
+   Uber Eats:       6,746 (25.7%)
+   DoorDash:        5,784 (22.1%)
+   Self-Delivery:   5,620 (21.4%)
+
+South Auckland:
+   In-Store:       11,157 (32.0%)
+   Uber Eats:       8,248 (23.6%)
+   DoorDash:        6,737 (19.3%)
+   Self-Delivery:   8,739 (25.1%)
+
+West Auckland:
+   In-Store:       13,859 (33.2%)
+   Uber Eats:       9,917 (23.8%)
+   DoorDash:        9,585 (23.0%)
+   Self-Delivery:   8,351 (20.0%)
+
+Urban vs Suburban Ordering Behavior:
+   Central Auckland (Urban): In-Store 28.0%, Delivery 72.0%
+   Rest of Auckland (Suburban): In-Store 32.2%, Delivery 67.8%
+
+================================================================================
+CUISINE & SEGMENT CHANNEL PATTERNS
+================================================================================
+
+1. Channel Mix by Cuisine Type:
+                  InStorePct  UEPct  DDPct  SDPct  AggregatorPct
+CuisineType                                                     
+Pizza                   25.0   27.4   27.8   19.8           55.2
+Indian                  28.5   27.9   24.7   18.9           52.6
+Sushi & Japanese        29.5   27.0   22.2   21.3           49.2
+Burgers                 28.2   24.6   23.4   23.8           48.0
+Mexican                 29.9   25.6   22.1   22.4           47.7
+Mediterranean           32.1   25.9   20.6   21.4           46.5
+Asian Fusion            32.2   23.9   21.5   22.4           45.4
+Steak & Grill           35.2   23.1   21.1   20.6           44.2
+Cafe & Brunch           38.9   21.7   19.7   19.8           41.4
+Seafood                 36.5   20.9   18.2   24.4           39.1
+
+2. Channel Reliance by Segment:
+               InStorePct  UEPct  DDPct  SDPct  AggregatorPct
+Segment                                                      
+Casual Dining        29.7   25.7   23.7   20.9           49.4
+QSR                  31.5   25.0   22.4   21.1           47.4
+Fast Casual          31.6   25.2   22.1   21.1           47.3
+Cafe                 31.2   24.6   22.5   21.7           47.1
+Fine Dining          33.0   24.3   21.1   21.5           45.4
+
+3. Top Aggregator-Heavy Cuisines:
+   Pizza: 55.2% aggregator reliance
+   Indian: 52.6% aggregator reliance
+   Sushi & Japanese: 49.2% aggregator reliance
+   Burgers: 48.0% aggregator reliance
+   Mexican: 47.7% aggregator reliance
+
+================================================================================
+CHANNEL DEPENDENCY RISK IDENTIFICATION
+================================================================================
+
+1. Aggregator Dependency Risk (70%+ on single aggregator):
+   High Risk (≥70%): 0 restaurants (0.0%)
+   Moderate Risk (50-69%): 0 restaurants (0.0%)
+   Low Risk (<50%): 150 restaurants (100.0%)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 1115, in setitem
+    casted = np_can_hold_element(values.dtype, value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/dtypes/cast.py", line 1705, in np_can_hold_element
+    raise LossySetitemError
+pandas.errors.LossySetitemError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/eda_analysis.py", line 247, in <module>
+    df.loc[df[ch + "_prop"] > 0, "ChannelDiversificationScore"] -= df[ch + "_prop"] * np.log2(df[ch + "_prop"])
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py", line 938, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py", line 1953, in _setitem_with_indexer
+    self._setitem_with_indexer_split_path(indexer, value, name)
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py", line 1997, in _setitem_with_indexer_split_path
+    self._setitem_single_column(ilocs[0], value, pi)
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py", line 2181, in _setitem_single_column
+    self.obj._mgr.column_setitem(loc, plane_indexer, value)
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 1528, in column_setitem
+    new_mgr = col_mgr.setitem((idx,), value)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 607, in setitem
+    return self.apply("setitem", indexer=indexer, value=value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 445, in apply
+    applied = getattr(b, f)(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 1118, in setitem
+    nb = self.coerce_to_target_dtype(value, raise_on_upcast=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 468, in coerce_to_target_dtype
+    raise TypeError(f"Invalid value '{other}' for dtype '{self.values.dtype}'")
+TypeError: Invalid value '[0.49784036 0.53072    0.49835946 0.52258216 0.52733764 0.53049469
+ 0.52752404 0.47378882 0.53071223 0.51410198 0.52625253 0.5204915
+ 0.51433827 0.52271608 0.52422449 0.53004179 0.52225595 0.52181037
+ 0.50861232 0.5293609  0.51515069 0.52129449 0.44333375 0.50427571
+ 0.52666266 0.52799228 0.53037173 0.51897661 0.48827498 0.52899417
+ 0.51984256 0.50920958 0.50573669 0.52905792 0.5303497  0.52483376
+ 0.49921411 0.50618061 0.53063906 0.52024681 0.5248816  0.52100118
+ 0.49672889 0.5201233  0.5288387  0.53056011 0.52463054 0.50071963
+ 0.51773159 0.52940074 0.50608235 0.53039916 0.51313824 0.51112058
+ 0.50175395 0.52501621 0.52994859 0.52955615 0.52903944 0.50148376
+ 0.51394343 0.50121215 0.51645476 0.52082289 0.52425541 0.46323651
+ 0.52995659 0.52945505 0.52406341 0.53018487 0.53073231 0.51656365
+ 0.52895984 0.52714284 0.51210247 0.49541529 0.53021686 0.52572716
+ 0.5239663  0.52864544 0.50297853 0.51734834 0.52418376 0.50767562
+ 0.53032125 0.52777941 0.51936588 0.52164013 0.53039916 0.51841299
+ 0.52273226 0.53064172 0.48705529 0.53032414 0.52931952 0.52986637
+ 0.46681933 0.44582223 0.5307282  0.52124986 0.52942405 0.52831609
+ 0.51495931 0.52744699 0.53026603 0.49714085 0.51874626 0.52868487
+ 0.53006202 0.53019721 0.49943981 0.52064285 0.50239661 0.52932876
+ 0.5030836  0.52266265 0.52111908 0.52766051 0.51268652 0.52344424
+ 0.52950588 0.50777027 0.50739037 0.43635796 0.52958501 0.52519312
+ 0.52376984 0.51201819 0.52955615 0.52195092 0.51231224 0.53063628
+ 0.51917213 0.53073411 0.53025505 0.50795891 0.52945505 0.53068293
+ 0.52593284 0.52553818 0.52236545 0.53056529 0.52674754 0.5223486
+ 0.4833449  0.53071079 0.53071121 0.52183857 0.51002155 0.52707256]' for dtype 'int64'

@@ -1,0 +1,42 @@
+Share sum stats: min=99.99, max=100.01, mean=100.00
+
+Dataset generated: 150 restaurants, 30 columns
+Columns: ['RestaurantID', 'RestaurantName', 'CuisineType', 'Segment', 'Subregion', 'GrowthFactor', 'AOV', 'MonthlyOrders', 'InStoreOrdersCount', 'UberEatsOrdersCount', 'DoorDashOrdersCount', 'SelfDeliveryOrdersCount', 'InStoreRevenue', 'UberEatsRevenue', 'DoorDashRevenue', 'SelfDeliveryRevenue', 'COGSRate', 'OPEXRate', 'CommissionRate', 'DeliveryRadiusKM', 'DeliveryCostOrder', 'SD_DeliveryTotalCost', 'InStoreNetProfit', 'UberEatsNetProfit', 'DoorDashNetProfit', 'SelfDeliveryNetProfit', 'InStoreShare', 'UE_share', 'DD_share', 'SD_share']
+
+Subregion distribution:
+Subregion
+West Auckland       37
+Central Auckland    30
+East Auckland       30
+South Auckland      30
+North Shore         23
+Name: count, dtype: int64
+
+Cuisine distribution:
+CuisineType
+Mediterranean       20
+Pizza               20
+Steak & Grill       18
+Cafe & Brunch       15
+Seafood             15
+Mexican             14
+Sushi & Japanese    14
+Burgers             13
+Indian              12
+Asian Fusion         9
+Name: count, dtype: int64
+
+Segment distribution:
+Segment
+QSR              38
+Cafe             34
+Fine Dining      33
+Fast Casual      26
+Casual Dining    19
+Name: count, dtype: int64
+
+Sample data (first 3 rows):
+  RestaurantID    RestaurantName    CuisineType        Segment         Subregion  GrowthFactor    AOV  MonthlyOrders  InStoreOrdersCount  UberEatsOrdersCount  DoorDashOrdersCount  SelfDeliveryOrdersCount  InStoreRevenue  UberEatsRevenue  DoorDashRevenue  SelfDeliveryRevenue  COGSRate  OPEXRate  CommissionRate  DeliveryRadiusKM  DeliveryCostOrder  SD_DeliveryTotalCost  InStoreNetProfit  UberEatsNetProfit  DoorDashNetProfit  SelfDeliveryNetProfit  InStoreShare  UE_share  DD_share  SD_share
+0        R1001   Glenfield Grill        Mexican           Cafe  Central Auckland        1.0291  26.38            914                 225                  243                  237                      209         5265.00          6954.66          6548.31              5346.22    0.2113    0.4527          0.2908               3.0               5.28               1103.52           1769.04             314.35             295.98                 692.81         24.62     26.59     25.93     22.87
+1        R1002     Gordon Bistro  Mediterranean            QSR     East Auckland        1.0209  19.51           2847                1056                  801                  376                      614        18955.20         16837.02          8114.08             11635.30    0.3185    0.2163          0.2411               5.6               1.18                724.52           8817.96            3773.18            1818.37                4688.22         37.09     28.13     13.21     21.57
+2        R1003  Rosedale Kitchen          Pizza  Casual Dining     East Auckland        1.0009  46.79           1890                 467                  564                  508                      351        20216.43         28938.84         23423.88             15858.18    0.3511    0.3488          0.1812              11.5               1.03                361.53           6066.95            3440.83            2785.10                4397.51         24.71     29.84     26.88     18.57

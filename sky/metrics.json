@@ -1,0 +1,30 @@
+{
+  "total_restaurants": 150,
+  "total_orders": 180702,
+  "total_revenue": 6398359.41,
+  "total_profit": 1174198.81,
+  "channel_orders": {
+    "In-Store": 56662,
+    "Uber Eats": 45211,
+    "DoorDash": 40533,
+    "Self-Delivery": 38296
+  },
+  "channel_revenue": {
+    "In-Store": 1869967.98,
+    "Uber Eats": 1697357.44,
+    "DoorDash": 1487054.23,
+    "Self-Delivery": 1343979.76
+  },
+  "channel_profit": {
+    "In-Store": 582113.76,
+    "Uber Eats": 154228.98,
+    "DoorDash": 130383.6,
+    "Self-Delivery": 307472.47
+  },
+  "avg_diversification_score": 0.98,
+  "avg_aggregator_dependence": 47.0,
+  "avg_instore_reliance": 31.6,
+  "high_risk_count": 0,
+  "moderate_risk_count": 0,
+  "low_risk_count": 150
+}
