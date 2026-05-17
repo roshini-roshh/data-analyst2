@@ -77,7 +77,7 @@ st.markdown("""
 # ============================================================
 @st.cache_data
 def load_data():
-    df = pd.read_csv("sky/skycity_auckland_restaurants.csv")
+    df = pd.read_csv("skycity_auckland_restaurants.csv")
     # Compute additional columns
     df["TotalDeliveryOrders"] = df["UberEatsOrdersCount"] + df["DoorDashOrdersCount"] + df["SelfDeliveryOrdersCount"]
     df["AggregatorDependence"] = df["UE_share"] + df["DD_share"]
